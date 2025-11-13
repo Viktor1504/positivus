@@ -1,0 +1,7 @@
+@mixin fluid-text( $min: 1, $max: 3) {
+  font-size: clamp(#{$min}rem, 0.1485rem + 3.1683vw, #{$max}rem)
+}
+
+@mixin reset-link {
+  color: inherit;
+}
