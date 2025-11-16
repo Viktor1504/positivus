@@ -1,7 +1,39 @@
-@mixin fluid-text( $min: 1, $max: 3) {
-  font-size: clamp(#{$min}rem, 0.1485rem + 3.1683vw, #{$max}rem)
+@mixin fluid-text($max: 48, $min: 16, $base: 16) {
+  // Конвертируем пиксели в rem, деля на базовый размер (например, 16px = 1rem)
+  $max-rem: $max / $base;
+  $min-rem: $min / $base;
+
+  font-size: clamp($min-rem, 0.1485rem + 3.1683vw, $max-rem);
 }
 
 @mixin reset-link {
   color: inherit;
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin flex-center($isInline: false) {
+  @if $isInline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50%, -50%;
+}
+
+@mixin square($size) {
+  width: $sise;
+  aspect-ratio: 1;
 }

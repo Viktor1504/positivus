@@ -215,10 +215,24 @@ svg * {
   font-style: normal;
   font-display: swap;
 }
+button {
+  background-color: darkgreen;
+}
+@media (hover: hover) {
+  button:hover {
+    background-color: lightsalmon;
+  }
+}
+@media (hover: none) {
+  button:active {
+    background-color: lightsalmon;
+  }
+}
+
 :root {
   --color-dark: #191A23;
   --color-dark-alt: #292A32;
-  --color-white: #FFFFFF;
+  --color-light: #FFFFFF;
   --color-accent: #B9FF66;
   --color-gray: #F3F3F3;
   --color-gray-alt: #898989;
@@ -227,13 +241,83 @@ svg * {
   --border-radius-small: 7px;
   --border-radius-large: 45px;
   --shadow: 0 5px 0 0 var(--color-dark);
-  --font-family-base: "Space Grotesk", sans-serif;
+  --font-family-base: 'Space Grotesk', sans-serif;
   --container-width: 1240px;
   --container-padding-x: 20px;
   --section-padding-y: 70px;
   --input-height: 59px;
   --button-height: 68px;
   --transition-duration: 0.2s;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  background-color: lightsalmon;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .visible-mobile {
+    display: none !important;
+  }
+}
+
+body {
+  font-size: clamp(1, 0.1485rem + 3.1683vw, 1.125);
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  line-height: 1.28;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+a, button, input, textarea, svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: clamp(2.6875, 0.1485rem + 3.1683vw, 3.75);
+}
+
+h2 {
+  font-size: clamp(2.25, 0.1485rem + 3.1683vw, 2.5);
+}
+
+h1 {
+  font-size: clamp(1.625, 0.1485rem + 3.1683vw, 1.875);
+}
+
+h1 {
+  font-size: clamp(1.125, 0.1485rem + 3.1683vw, 1.25);
 }
 
 /*# sourceMappingURL=styles.css.map */
