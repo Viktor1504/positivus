@@ -3,6 +3,7 @@
   height: 100%;
   margin: 0;
   border: none;
+  padding: 14px 20px;
 
   &:modal {
     max-width: 100%;
@@ -14,5 +15,10 @@
     justify-content: end;
   }
 
-  
+  &__list {
+    @include flex-center;
+    flex-direction: column;
+    row-gap: 30px;
+    min-height: 80vh;
+  }
 }
