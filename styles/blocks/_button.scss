@@ -1,3 +1,6 @@
+@use '../mixins' as *;
+@use '../media' as *;
+
 .button {
   @include flex-center(true);
 

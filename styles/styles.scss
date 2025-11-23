@@ -1,13 +1,17 @@
-@import 'normalize',
-'fonts',
-'mixins',
-'media',
-'variables',
-'utils',
-'globals';
+// Базовые стили
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'mixins';
+@use 'media';
+@use 'utils';
+@use 'globals';
 
-@import 'blocks/button',
-'blocks/burger-button',
-'blocks/header',
-'blocks/cross-button',
-'blocks/mobile-overlay';
+// Блоки
+@use 'blocks/button';
+@use 'blocks/burger-button';
+@use 'blocks/header';
+@use 'blocks/cross-button';
+@use 'blocks/mobile-overlay';
+@use 'blocks/section';
+@use 'blocks/hero';
