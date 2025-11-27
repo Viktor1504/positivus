@@ -9,6 +9,7 @@
 
 // Блоки
 @use 'blocks/button';
+@use 'blocks/services';
 @use 'blocks/grid';
 @use 'blocks/burger-button';
 @use 'blocks/header';
@@ -17,6 +18,5 @@
 @use 'blocks/section';
 @use 'blocks/hero';
 @use 'blocks/puddle-bg';
-@use 'blocks/services';
 @use 'blocks/service-card';
 @use 'blocks/banner';
