@@ -1,9 +1,5 @@
-@mixin fluid-text($max: 48, $min: 16, $base: 16) {
-  // Конвертируем пиксели в rem, деля на базовый размер (например, 16px = 1rem)
-  $max-rem: $max / $base;
-  $min-rem: $min / $base;
-
-  font-size: clamp($min-rem, 0.1485rem + 3.1683vw, $max-rem);
+@mixin fluid-text($max: 48, $min: 16) {
+  font-size: clamp(#{$min}px, #{$max / 1440 * 100}vw, #{$max}px);
 }
 
 @mixin reset-link {
