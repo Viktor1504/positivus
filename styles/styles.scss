@@ -8,6 +8,9 @@
 @use 'globals';
 
 // Блоки
+@use 'blocks/field';
+@use 'blocks/radios';
+@use 'blocks/radio';
 @use 'blocks/button';
 @use 'blocks/services';
 @use 'blocks/grid';
@@ -27,3 +30,4 @@
 @use 'blocks/reviews';
 @use 'blocks/review-card';
 @use 'blocks/pagination';
+@use 'blocks/contact-us';
