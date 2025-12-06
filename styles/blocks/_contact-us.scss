@@ -25,7 +25,6 @@
     @include tablet {
       display: none;
     }
-
   }
 
   &__form,
@@ -42,8 +41,10 @@
   }
 
   &__request-types {
-    padding: 40px 52px 36px;
-    border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+    @include mobile {
+      padding: 40px 52px 36px;
+      border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+    }
   }
 
   &__form {

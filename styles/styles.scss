@@ -2,8 +2,8 @@
 @use 'normalize';
 @use 'fonts';
 @use 'variables';
-@use 'mixins';
-@use 'media';
+//@use 'mixins';
+//@use 'media';
 @use 'utils';
 @use 'globals';
 
@@ -31,3 +31,6 @@
 @use 'blocks/review-card';
 @use 'blocks/pagination';
 @use 'blocks/contact-us';
+@use 'blocks/soc1als';
+@use 'blocks/subscribe-form';
+@use 'blocks/footer';
